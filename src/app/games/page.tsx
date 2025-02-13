@@ -11,23 +11,23 @@ const games = [
   {
     id: 1,
     title: "色読みクイズ",
-    duration: "10分",
-    thumbnailUrl: "https://img.youtube.com/vi/azlzk27kR8o/0.jpg",
-    videoSrc: "https://www.youtube.com/embed/azlzk27kR8o?si=duC0r7D2Y3OOZbXR&autoplay=1&mute=1",
+    duration: "所要時間7分",
+    thumbnailUrl: "https://img.youtube.com/vi/3FDLWRf7DBU/0.jpg",
+    videoSrc: "https://www.youtube.com/embed/3FDLWRf7DBU?autoplay=1",
   },
   {
     id: 2,
     title: "旗揚げゲーム",
-    duration: "15分",
-    thumbnailUrl: "https://img.youtube.com/vi/azlzk27kR8o/1.jpg",
-    videoSrc: "https://www.youtube.com/embed/azlzk27kR8o?si=duC0r7D2Y3OOZbXR&autoplay=1&mute=1",
+    duration: "所要時間10分",
+    thumbnailUrl: "https://img.youtube.com/vi/QvOMIN5a_w4/0.jpg",
+    videoSrc: "https://www.youtube.com/embed/QvOMIN5a_w4?autoplay=1",
   },
   {
     id: 3,
-    title: "メロディクイズ（イントロドン系）",
-    duration: "12分",
-    thumbnailUrl: "https://img.youtube.com/vi/azlzk27kR8o/2.jpg",
-    videoSrc: "https://www.youtube.com/embed/azlzk27kR8o?si=duC0r7D2Y3OOZbXR&autoplay=1&mute=1",
+    title: "メロディクイズ",
+    duration: "所要時間15分",
+    thumbnailUrl: "https://img.youtube.com/vi/sKUf48AVj5o/0.jpg",
+    videoSrc: "https://www.youtube.com/embed/sKUf48AVj5o?autoplay=1",
   },
 ]
 
@@ -77,4 +77,3 @@ export default function GamesPage() {
     </div>
   )
 }
-

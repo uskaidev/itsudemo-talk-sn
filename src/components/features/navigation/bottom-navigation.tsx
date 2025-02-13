@@ -2,6 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
+import { MainButton } from "@/components/common/main-button"
 
 export function BottomNavigation() {
   const pathname = usePathname()

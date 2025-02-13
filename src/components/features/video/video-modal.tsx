@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "../../../components/ui/dialog"
 
 interface VideoModalProps {
@@ -11,14 +11,6 @@ interface VideoModalProps {
 
 export function VideoModal({ isOpen, onClose, videoTitle, videoSrc }: VideoModalProps) {
   const videoRef = useRef<HTMLIFrameElement>(null)
-
-  useEffect(() => {
-    if (isOpen && videoRef.current) {
-      // Add autoplay=1 and mute=1 to ensure autoplay works
-      const newSrc = `${videoSrc}&autoplay=1&mute=1`
-      videoRef.current.src = newSrc
-    }
-  }, [isOpen, videoSrc])
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

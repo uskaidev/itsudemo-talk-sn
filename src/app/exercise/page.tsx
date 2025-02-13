@@ -10,24 +10,24 @@ import { VideoModal } from "@/components/features/video/video-modal"
 const exerciseVideos = [
   {
     id: 1,
-    title: "スローエアロビクス ジュピターVer.",
-    duration: "10分",
-    thumbnailUrl: "https://img.youtube.com/vi/yUBM24DmB-8/0.jpg",
-    videoSrc: "https://www.youtube.com/embed/yUBM24DmB-8?si=2W4RGRoRd1bp_suq&autoplay=1&mute=1",
+    title: "スローエアロビック",
+    duration: "所要時間10分",
+    thumbnailUrl: "https://img.youtube.com/vi/d2EDVVBj7qE/0.jpg",
+    videoSrc: "https://www.youtube.com/embed/d2EDVVBj7qE?autoplay=1",
   },
   {
     id: 2,
     title: "スポーツ体操",
-    duration: "15分",
-    thumbnailUrl: "https://img.youtube.com/vi/yUBM24DmB-8/1.jpg",
-    videoSrc: "https://www.youtube.com/embed/yUBM24DmB-8?si=2W4RGRoRd1bp_suq&autoplay=1&mute=1",
+    duration: "所要時間5分",
+    thumbnailUrl: "https://img.youtube.com/vi/mHzN0IEsUcs/0.jpg",
+    videoSrc: "https://www.youtube.com/embed/mHzN0IEsUcs?autoplay=1",
   },
   {
     id: 3,
     title: "うた体操〜スキーの歌〜",
-    duration: "12分",
-    thumbnailUrl: "https://img.youtube.com/vi/yUBM24DmB-8/2.jpg",
-    videoSrc: "https://www.youtube.com/embed/yUBM24DmB-8?si=2W4RGRoRd1bp_suq&autoplay=1&mute=1",
+    duration: "所要時間10分",
+    thumbnailUrl: "https://img.youtube.com/vi/R2PsFGPN6-k/0.jpg",
+    videoSrc: "https://www.youtube.com/embed/R2PsFGPN6-k?autoplay=1",
   },
 ]
 
@@ -77,4 +77,3 @@ export default function ExercisePage() {
     </div>
   )
 }
-
