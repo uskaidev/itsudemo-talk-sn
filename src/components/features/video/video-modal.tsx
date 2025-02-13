@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef } from "react"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "../../../components/ui/dialog"
 
 interface VideoModalProps {
   isOpen: boolean
@@ -22,7 +22,7 @@ export function VideoModal({ isOpen, onClose, videoTitle, videoSrc }: VideoModal
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-[90vw] max-h-[90vh] p-4 flex flex-col">
+      <DialogContent className="w-[98vw] h-[98vh] p-0 flex flex-col relative [&>button]:hidden border-0 overflow-hidden">
         <button
           onClick={onClose}
           className="absolute -right-2 -top-2 bg-[#276204] rounded-md p-3 hover:bg-[#1E4A03] transition-colors z-10"
@@ -41,7 +41,11 @@ export function VideoModal({ isOpen, onClose, videoTitle, videoSrc }: VideoModal
             <path d="M6 6l12 12" />
           </svg>
         </button>
-        <div className="h-[70vh] w-full">
+        <DialogTitle className="absolute w-1 h-1 overflow-hidden">{videoTitle}</DialogTitle>
+        <DialogDescription className="absolute w-1 h-1 overflow-hidden">
+          動画を再生・視聴するためのモーダルウィンドウです
+        </DialogDescription>
+        <div className="flex-1 min-h-0 w-full">
           <iframe
             ref={videoRef}
             className="w-full h-full"
@@ -51,7 +55,7 @@ export function VideoModal({ isOpen, onClose, videoTitle, videoSrc }: VideoModal
             allowFullScreen
           />
         </div>
-        <div className="mt-4 flex flex-col">
+        <div className="p-4 flex flex-col shrink-0">
           <h2 className="text-3xl font-bold mb-3 line-clamp-1 font-zen-maru-gothic">{videoTitle}</h2>
           <button
             className="w-full bg-[#276204] hover:bg-[#1E4A03] text-white py-4 rounded-xl text-2xl font-bold transition-colors font-zen-maru-gothic"
@@ -64,4 +68,3 @@ export function VideoModal({ isOpen, onClose, videoTitle, videoSrc }: VideoModal
     </Dialog>
   )
 }
-
