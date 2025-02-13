@@ -61,10 +61,10 @@ export default function OutdoorActivities() {
         <div className="flex-1 flex items-center justify-center">
           <div className="grid grid-cols-4 gap-4 w-full max-w-[1800px]">
             {activities.map((activity) => (
-              <Card
-                key={activity.id}
-                className="overflow-hidden bg-white shadow-lg flex flex-col cursor-pointer transition-transform duration-200 hover:scale-105 h-[600px]"
-              >
+              <Link key={activity.id} href="/outside/details" className="block">
+                <Card
+                  className="group overflow-hidden bg-white shadow-lg flex flex-col cursor-pointer transition-transform duration-200 hover:scale-105 h-[600px]"
+                >
                 <div className="relative w-full h-[280px]">
                   <Image
                     src={activity.image || "/placeholder.svg"}
@@ -87,13 +87,15 @@ export default function OutdoorActivities() {
                     <p className="text-lg text-gray-600 font-zen-maru-gothic">{activity.description}</p>
                   </div>
 
-                  <Link href="/outside/details" passHref>
-                    <button className="w-full py-3 text-xl bg-[#276204] hover:bg-[#1E4A03] text-white font-zen-maru-gothic rounded-xl transition-colors mt-4">
+                    <button 
+                      onClick={(e) => e.stopPropagation()} 
+                      className="w-full py-3 text-xl bg-[#276204] group-hover:bg-[#1E4A03] text-white font-zen-maru-gothic rounded-xl transition-colors mt-4"
+                    >
                       詳細を見る
                     </button>
-                  </Link>
                 </CardContent>
-              </Card>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
@@ -102,4 +104,3 @@ export default function OutdoorActivities() {
     </div>
   )
 }
-
