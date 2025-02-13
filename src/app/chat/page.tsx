@@ -89,15 +89,21 @@ export default function ChatPage() {
     wrapDiv.appendChild(stylesheet)
     wrapDiv.appendChild(container)
 
-    if (avatarContainerRef.current) {
-      avatarContainerRef.current.appendChild(wrapDiv)
+    // Get ref value once at the start of the effect
+    const ref = avatarContainerRef.current
+
+    if (ref) {
+      ref.appendChild(wrapDiv)
     }
 
     return () => {
       window.removeEventListener("message", handleMessage)
-      const avatarElement = document.getElementById("heygen-streaming-embed")
-      if (avatarElement && avatarContainerRef.current) {
-        avatarContainerRef.current.removeChild(avatarElement)
+      // Use the same ref value from the effect scope
+      if (ref) {
+        const avatarElement = ref.querySelector("#heygen-streaming-embed")
+        if (avatarElement) {
+          ref.removeChild(avatarElement)
+        }
       }
     }
   }, [])
@@ -130,4 +136,3 @@ export default function ChatPage() {
     </div>
   )
 }
-
